@@ -3,6 +3,9 @@
 .container {
   --padding: #{$container-min-margin-inline} * 2;
   --max-width: #{$container-max-width};
+  @include mq(medium) {
+    --padding: #{$container-min-margin-inline-tablet-desktop} * 2;
+  }
 
   width: min(100% - var(--padding), var(--max-width));
   margin-inline: auto;

@@ -31,3 +31,18 @@
     }
   }
 }
+
+:root[data-theme="light"] {
+  @each $color, $shade-map in $light {
+    @each $shade, $value in $shade-map {
+      --#{$color}-#{$shade}: #{$value};
+    }
+  }
+}
+:root[data-theme="dark"] {
+  @each $color, $shade-map in $dark {
+    @each $shade, $value in $shade-map {
+      --#{$color}-#{$shade}: #{$value};
+    }
+  }
+}

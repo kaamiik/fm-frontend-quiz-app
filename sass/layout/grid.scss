@@ -1,6 +1,6 @@
 @use "../abstracts/" as *;
 
-.even-columns {
+.grid {
   display: grid;
   gap: var(--grid-gap, $grid-gap);
 

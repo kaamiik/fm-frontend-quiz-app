@@ -1,0 +1,37 @@
+.img-wrapper {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  display: grid;
+  place-content: center;
+}
+
+svg.html-icon {
+  width: 32px;
+  height: 28px;
+}
+svg.css-icon {
+  width: 25px;
+  height: 32px;
+}
+svg.js-icon {
+  width: 30px;
+  height: 30px;
+}
+svg.accessibility-icon {
+  width: 25px;
+  height: 30px;
+}
+
+.img-wrapper.html-icon {
+  background-color: #fff1e9;
+}
+.img-wrapper.css-icon {
+  background-color: #e0fdef;
+}
+.img-wrapper.js-icon {
+  background-color: #ebf0ff;
+}
+.img-wrapper.accessibility-icon {
+  background-color: #f6e7ff;
+}

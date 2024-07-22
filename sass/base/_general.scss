@@ -4,15 +4,26 @@ body {
   font-family: $font-family-base;
   font-weight: $font-weight-default;
   font-size: $font-size-400;
-  color: $color-neutral-1000;
-  background-color: $color-neutral-000;
-  line-height: 1.5;
+  color: $color-neutral-900;
+  background-color: $color-neutral-200;
+  display: flex;
+  flex-direction: column;
 }
 
-a {
-  color: $color-accent-300;
+header {
+  margin-block: $size-4;
+
+  .subject-header {
+    display: flex;
+    align-items: center;
+    gap: $size-4;
+    color: $color-neutral-900;
+    font-size: $font-size-500;
+    font-weight: $font-weight-medium;
+    cursor: pointer;
+  }
 }
 
-a:is(:hover, :focus) {
-  color: $color-primary-300;
+main {
+  margin-block: $size-8;
 }

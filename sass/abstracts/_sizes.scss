@@ -56,14 +56,15 @@ $size-24: 8rem;
 $size-25: 9rem;
 $size26: 10rem;
 
-$grid-gap: $size-6;
+$grid-gap: $size-10;
 $flex-group-gap: $size-4;
 
 $hero-padding-block: clamp(15rem, 15vh, 20rem);
 $card-body-padding: clamp(15rem, 15vh, 20rem);
 $section-padding-block: clamp(5rem, 10vh, 6rem);
 
-$container-min-margin-inline: $size-4;
-$container-max-width: 64rem;
+$container-min-margin-inline: $size-6;
+$container-min-margin-inline-tablet-desktop: $size-16;
+$container-max-width: 72.5rem;
 $container-max-width-narrow: 40rem;
 $container-max-width-wide: 75rem;

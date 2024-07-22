@@ -1,0 +1,7 @@
+@use "../abstracts/" as *;
+
+.subtitle-text {
+  color: $color-neutral-700;
+  margin-block-start: $size-4;
+  font-style: italic;
+}
