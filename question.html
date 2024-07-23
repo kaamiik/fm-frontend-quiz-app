@@ -17,11 +17,15 @@
   <body>
     <header>
       <div class="container | flex">
-        <div class="subject-header | visibility-hidden" aria-hidden="true">
-          <div class="img-wrapper html">
-            <img src="/assets/images/icon-html.svg" class="html-icon" alt="" />
+        <div class="subject-header |" aria-hidden="true">
+          <div class="img-wrapper accessibility">
+            <img
+              src="/assets/images/icon-accessibility.svg"
+              class="accessibility-icon"
+              alt=""
+            />
           </div>
-          <p>HTML</p>
+          <p>Accessibility</p>
         </div>
         <fieldset role="radiogroup" aria-label="theme switcher">
           <div class="c-toggle">
@@ -70,87 +74,87 @@
     <main>
       <form action="question.html" method="get">
         <div class="container | grid">
-          <div class="intro-section">
-            <h1 class="heading-l-light">
-              Welcome to the <strong class="fw-medium">Frontend Quiz!</strong>
-            </h1>
+          <!-- Quiz question start -->
+          <div class="question-section">
+            <p class="clr-neutral-700 body-s question-number-size">
+              Question <span class="number">6</span> of 10
+            </p>
+            <h2 class="heading-m">
+              Which of these color contrast ratios defines the minimum WCAG 2.1
+              Level AA requirement for normal text?
+            </h2>
           </div>
-
-          <!-- Quiz menu start -->
-          <div class="menu-start">
-            <ul class="flow">
-              <li class="subject">
-                <button
-                  type="submit"
-                  name="subject"
-                  value="html"
-                  class="subject-button"
-                >
-                  <div class="img-wrapper html">
-                    <img
-                      src="/assets/images/icon-html.svg"
-                      class="html-icon"
-                      alt=""
-                    />
+          <div class="question-options | flow">
+            <ul class="options | flow">
+              <li>
+                <label class="option" for="first-option">
+                  <input
+                    type="radio"
+                    name="question-1"
+                    id="first-option"
+                    value="a"
+                  />
+                  <div class="option-num">
+                    <p class="clr-neutral-500 heading-s">A</p>
                   </div>
-                  HTML
-                </button>
+                  <p class="heading-s">4.5:1</p>
+                </label>
               </li>
-              <li class="subject">
-                <button
-                  type="submit"
-                  name="subject"
-                  value="css"
-                  class="subject-button"
-                >
-                  <div class="img-wrapper css">
-                    <img
-                      src="/assets/images/icon-css.svg"
-                      class="css-icon"
-                      alt=""
-                    />
+              <li>
+                <label class="option" for="second-option">
+                  <input
+                    type="radio"
+                    name="question-1"
+                    id="second-option"
+                    value="b"
+                  />
+                  <div class="option-num">
+                    <p class="clr-neutral-500 heading-s">B</p>
                   </div>
-                  CSS
-                </button>
+                  <p class="heading-s">3:1</p>
+                </label>
               </li>
-              <li class="subject">
-                <button
-                  type="submit"
-                  name="subject"
-                  value="javascript"
-                  class="subject-button"
-                >
-                  <div class="img-wrapper js">
-                    <img
-                      src="/assets/images/icon-js.svg"
-                      class="js-icon"
-                      alt=""
-                    />
+              <li>
+                <label class="option" for="third-option">
+                  <input
+                    type="radio"
+                    name="question-1"
+                    id="third-option"
+                    value="c"
+                  />
+                  <div class="option-num">
+                    <p class="clr-neutral-500 heading-s">C</p>
                   </div>
-                  Javascript
-                </button>
+                  <p class="heading-s">2.5:1</p>
+                </label>
               </li>
-              <li class="subject">
-                <button
-                  type="submit"
-                  name="subject"
-                  value="accessibility"
-                  class="subject-button"
-                >
-                  <div class="img-wrapper accessibility">
-                    <img
-                      src="/assets/images/icon-accessibility.svg"
-                      class="accessibility-icon"
-                      alt=""
-                    />
+              <li>
+                <label class="option" for="fourth-option">
+                  <input
+                    type="radio"
+                    name="question-1"
+                    id="fourth-option"
+                    value="d"
+                  />
+                  <div class="option-num">
+                    <p class="clr-neutral-500 heading-s">D</p>
                   </div>
-                  Accessibility
-                </button>
+                  <p class="heading-s">3:1</p>
+                </label>
               </li>
             </ul>
+            <button class="button" type="submit">Submit Answers</button>
           </div>
         </div>
       </form>
     </main>
+
+    <!-- A B C D Submit answer -->
+    <!-- Quiz question end -->
+    <!-- Quiz completed start -->
+    <!-- Quiz completed You scored... -->
+    <!-- score -->
+    <!-- out of 10 -->
+    <!-- Quiz completed end -->
   </body>
 </html>

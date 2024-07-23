@@ -8,6 +8,8 @@ $-clr-light-grey: hsl(220, 38%, 97%);
 $-clr-pure-white: hsl(0, 0%, 100%);
 $-clr-green: hsl(151, 70%, 50%);
 $-clr-red: hsl(0, 82%, 63%);
+$-clr-box-shadow-light: hsla(220, 29%, 66%, 0.14);
+$-clr-box-shadow-dark: hsla(216, 25%, 25%, 0.14);
 
 $light: (
   "neutral": (
@@ -15,6 +17,7 @@ $light: (
     "200": $-clr-light-grey,
     "400": $-clr-light-grey,
     "500": $-clr-grey-navy,
+    "600": $-clr-box-shadow-light,
     "700": $-clr-grey-navy,
     "900": $-clr-dark-navy,
   ),
@@ -31,6 +34,7 @@ $dark: (
   "neutral": (
     "900": $-clr-pure-white,
     "700": $-clr-light-bluish,
+    "600": $-clr-box-shadow-dark,
     "500": $-clr-grey-navy,
     "400": $-clr-light-grey,
     "200": $-clr-dark-navy,
@@ -50,6 +54,7 @@ $color-neutral-100: var(--neutral-100);
 $color-neutral-200: var(--neutral-200);
 $color-neutral-400: var(--neutral-400);
 $color-neutral-500: var(--neutral-500);
+$color-neutral-600: var(--neutral-600);
 $color-neutral-700: var(--neutral-700);
 $color-neutral-900: var(--neutral-900);
 
@@ -61,13 +66,3 @@ $color-accent-500: var(--accent-500);
 // Change Theme
 $active-theme: $light;
 $enable-media-query-dark-mode: true;
-
-// Define box-shadow for each theme
-$box-shadow-light: 0 16px 40px rgba(143, 160, 193, 0.14);
-$box-shadow-dark: 0 16px 40px rgba(49, 62, 81, 0.14);
-
-$box-shadow: $box-shadow-light;
-
-@if $active-theme == $dark {
-  $box-shadow: $box-shadow-dark;
-}

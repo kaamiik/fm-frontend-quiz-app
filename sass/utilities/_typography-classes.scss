@@ -1,0 +1,37 @@
+@use "../abstracts/" as *;
+
+.display {
+  font-size: $font-size-900;
+  font-weight: $font-weight-medium;
+}
+
+.heading-l-bold {
+  font-size: $font-size-800;
+  font-weight: $font-weight-medium;
+}
+
+.heading-l-light {
+  font-size: $font-size-800;
+  font-weight: $font-weight-light;
+}
+
+.heading-m {
+  font-size: $font-size-700;
+  font-weight: $font-weight-medium;
+}
+
+.heading-s {
+  font-size: $font-size-600;
+  font-weight: $font-weight-medium;
+}
+
+.body-m {
+  font-size: $font-size-500;
+  font-weight: $font-weight-default;
+}
+
+.body-s {
+  font-size: $font-size-400;
+  font-weight: $font-weight-default;
+  font-style: italic;
+}

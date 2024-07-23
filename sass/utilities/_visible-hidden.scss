@@ -1,7 +1,8 @@
-.visibl .hidden {
+.hidden {
   display: none;
 }
 
 .visibility-hidden {
   visibility: hidden;
+  pointer-events: none;
 }

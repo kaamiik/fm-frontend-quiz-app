@@ -8,6 +8,14 @@
   margin-inline: auto;
 }
 
+.subtitle-size {
+  margin-block-start: $size-4;
+}
+
+.question-number-size {
+  margin-block-end: $size-3;
+}
+
 @each $size-name, $size-value in $sizes {
   .margin {
     &-#{$size-name} {

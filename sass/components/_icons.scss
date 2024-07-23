@@ -6,32 +6,32 @@
   place-content: center;
 }
 
-svg.html-icon {
+.html-icon {
   width: 32px;
   height: 28px;
 }
-svg.css-icon {
+.css-icon {
   width: 25px;
   height: 32px;
 }
-svg.js-icon {
+.js-icon {
   width: 30px;
   height: 30px;
 }
-svg.accessibility-icon {
+.accessibility-icon {
   width: 25px;
   height: 30px;
 }
 
-.img-wrapper.html-icon {
+.img-wrapper.html {
   background-color: #fff1e9;
 }
-.img-wrapper.css-icon {
+.img-wrapper.css {
   background-color: #e0fdef;
 }
-.img-wrapper.js-icon {
+.img-wrapper.js {
   background-color: #ebf0ff;
 }
-.img-wrapper.accessibility-icon {
+.img-wrapper.accessibility {
   background-color: #f6e7ff;
 }
