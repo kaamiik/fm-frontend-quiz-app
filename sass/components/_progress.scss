@@ -1,0 +1,43 @@
+@use "../abstracts/" as *;
+
+.progress-bar {
+  margin-block-start: 24px;
+  border: none;
+  width: 100%;
+  height: 16px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: $color-neutral-100; /* Background color for the outer box */
+  border-radius: 100vh; /* Border radius for the outer box */
+  overflow: hidden; /* Ensure the inner fill is clipped to the outer box */
+  position: relative;
+  padding: 4px;
+}
+
+/* Styling for the inner fill */
+.progress-bar::-webkit-progress-value {
+  background-color: $color-primary-400;
+  border-radius: 100vh;
+
+  height: 100%;
+  transition: width 0.2s ease;
+}
+
+/* For Firefox */
+.progress-bar::-moz-progress-bar {
+  background-color: $color-primary-400;
+  border-radius: 100vh;
+  height: 100%;
+}
+
+/* Adding custom styles for other browsers */
+.progress-bar::-ms-fill {
+  background-color: $color-primary-400;
+  border-radius: 100vh;
+  height: 100%;
+}
+
+.progress-bar::-webkit-progress-bar {
+  background-color: transparent; /* Make outer box transparent to show pseudo-element padding */
+}
