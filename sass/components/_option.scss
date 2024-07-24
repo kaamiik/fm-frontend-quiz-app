@@ -2,17 +2,48 @@
 
 .option {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: $size-4;
   background-color: $color-neutral-100;
   padding: $size-3;
   border-radius: $size-3;
   position: relative;
   box-shadow: 0 16px 40px 0 $color-neutral-600;
+
+  & > img {
+    width: 32px;
+    height: 32px;
+  }
 }
 
-.option:has(input[type="radio"]:checked) {
+.option-wrapper {
+  display: flex;
+  align-items: center;
+  gap: $size-4;
+}
+
+.option:has(input[type="radio"]:checked, input[type="radio"]:focus) {
   outline: 3px solid $color-primary-400;
+}
+
+.correct {
+  outline: 3px solid $color-accent-400;
+  & .option-num {
+    background-color: $color-accent-400;
+    p {
+      color: white;
+    }
+  }
+}
+
+.incorrect {
+  outline: 3px solid $color-accent-500;
+  & .option-num {
+    background-color: $color-accent-500;
+    p {
+      color: white;
+    }
+  }
 }
 
 input[type="radio"] {
@@ -30,4 +61,19 @@ input[type="radio"] {
   display: grid;
   place-content: center;
   border-radius: 6px;
+  p {
+    color: $color-neutral-500;
+  }
+}
+
+.error-check {
+  display: flex;
+  align-items: center;
+  gap: $size-3;
+  margin-inline: auto;
+  width: fit-content;
+  img {
+    width: 32px;
+    height: 32px;
+  }
 }

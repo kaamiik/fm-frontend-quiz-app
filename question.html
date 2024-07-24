@@ -72,7 +72,7 @@
       </div>
     </header>
     <main>
-      <form action="question.html" method="get">
+      <form action="score.html" method="get">
         <div class="container | grid">
           <!-- Quiz question start -->
           <div class="question-section">
@@ -89,73 +89,122 @@
             <ul class="options | flow">
               <li>
                 <label class="option" for="first-option">
-                  <input
-                    type="radio"
-                    name="question-1"
-                    id="first-option"
-                    value="a"
-                  />
-                  <div class="option-num">
-                    <p class="clr-neutral-500 heading-s">A</p>
+                  <div class="option-wrapper">
+                    <input
+                      type="radio"
+                      name="question-1"
+                      id="first-option"
+                      value="a"
+                      aria-checked="false"
+                    />
+                    <div class="option-num">
+                      <p class="heading-s">A</p>
+                    </div>
+                    <p class="heading-s">4.5:1</p>
                   </div>
-                  <p class="heading-s">4.5:1</p>
+                  <img
+                    class="hidden"
+                    src="/assets/images/icon-correct.svg"
+                    alt=""
+                  />
+                  <img
+                    class="hidden"
+                    src="/assets/images/icon-incorrect.svg"
+                    alt=""
+                  />
                 </label>
               </li>
               <li>
                 <label class="option" for="second-option">
-                  <input
-                    type="radio"
-                    name="question-1"
-                    id="second-option"
-                    value="b"
-                  />
-                  <div class="option-num">
-                    <p class="clr-neutral-500 heading-s">B</p>
+                  <div class="option-wrapper">
+                    <input
+                      type="radio"
+                      name="question-1"
+                      id="second-option"
+                      value="b"
+                      aria-checked="false"
+                    />
+                    <div class="option-num">
+                      <p class="heading-s">B</p>
+                    </div>
+                    <p class="heading-s">3:1</p>
                   </div>
-                  <p class="heading-s">3:1</p>
+                  <img
+                    class="hidden"
+                    src="/assets/images/icon-correct.svg"
+                    alt=""
+                  />
+                  <img
+                    class="hidden"
+                    src="/assets/images/icon-incorrect.svg"
+                    alt=""
+                  />
                 </label>
               </li>
               <li>
                 <label class="option" for="third-option">
-                  <input
-                    type="radio"
-                    name="question-1"
-                    id="third-option"
-                    value="c"
-                  />
-                  <div class="option-num">
-                    <p class="clr-neutral-500 heading-s">C</p>
+                  <div class="option-wrapper">
+                    <input
+                      type="radio"
+                      name="question-1"
+                      id="third-option"
+                      value="c"
+                      aria-checked="false"
+                    />
+                    <div class="option-num">
+                      <p class="heading-s">C</p>
+                    </div>
+                    <p class="heading-s">2.5:1</p>
                   </div>
-                  <p class="heading-s">2.5:1</p>
+                  <img
+                    class="hidden"
+                    src="/assets/images/icon-correct.svg"
+                    alt=""
+                  />
+                  <img
+                    class="hidden"
+                    src="/assets/images/icon-incorrect.svg"
+                    alt=""
+                  />
                 </label>
               </li>
               <li>
                 <label class="option" for="fourth-option">
-                  <input
-                    type="radio"
-                    name="question-1"
-                    id="fourth-option"
-                    value="d"
-                  />
-                  <div class="option-num">
-                    <p class="clr-neutral-500 heading-s">D</p>
+                  <div class="option-wrapper">
+                    <input
+                      type="radio"
+                      name="question-1"
+                      id="fourth-option"
+                      value="d"
+                      aria-checked="false"
+                    />
+                    <div class="option-num">
+                      <p class="heading-s">D</p>
+                    </div>
+                    <p class="heading-s">3:1</p>
                   </div>
-                  <p class="heading-s">3:1</p>
+                  <img
+                    class="hidden"
+                    src="/assets/images/icon-correct.svg"
+                    alt=""
+                  />
+                  <img
+                    class="hidden"
+                    src="/assets/images/icon-incorrect.svg"
+                    alt=""
+                  />
                 </label>
               </li>
             </ul>
             <button class="button" type="submit">Submit Answer</button>
+            <p class="error-check hidden | body-m">
+              <img src="/assets/images/icon-incorrect.svg" alt="" />
+              Please select an answer
+            </p>
           </div>
         </div>
       </form>
+      <!-- Quiz question end -->
     </main>
-
-    <!-- A B C D Submit answer -->
-    <!-- Quiz question end -->
-    <!-- Quiz completed start -->
-    <!-- Quiz completed You scored... -->
-    <!-- score -->
-    <!-- out of 10 -->
-    <!-- Quiz completed end -->
   </body>
 </html>

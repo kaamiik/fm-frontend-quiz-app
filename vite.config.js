@@ -12,7 +12,7 @@ export default defineConfig({
       input: {
         start: "index.html",
         question: "question.html",
-        // score: "score.html",
+        score: "score.html",
       },
     },
   },
