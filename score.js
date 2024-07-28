@@ -1,3 +1,7 @@
+import htmlIcon from "/assets/images/icon-html.svg";
+import cssIcon from "/assets/images/icon-css.svg";
+import jsIcon from "/assets/images/icon-js.svg";
+import accessibilityIcon from "/assets/images/icon-accessibility.svg";
 document.addEventListener("DOMContentLoaded", function () {
   // Cache elements
   const lightThemeRadio = document.querySelector("#light");
@@ -50,10 +54,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to update the subject icon
   function updateSubjectIcon(quiz) {
+    const iconPaths = {
+      html: htmlIcon,
+      css: cssIcon,
+      javascript: jsIcon,
+      accessibility: accessibilityIcon,
+    };
     const newHtml = `
       <div class="img-wrapper ${quiz.title.toLowerCase()}">
         <img src="${
-          quiz.icon
+          iconPaths[quiz.title.toLowerCase()]
         }" class="${quiz.title.toLowerCase()}-icon" alt="" />
       </div>
       <p>${quiz.title}</p>

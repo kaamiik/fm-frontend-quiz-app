@@ -2,10 +2,6 @@
 
 import { defineConfig } from "vite";
 
-// export default {
-//   plugins: [htmlPurge()],
-// };
-
 export default defineConfig({
   build: {
     rollupOptions: {

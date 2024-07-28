@@ -1,3 +1,10 @@
+import correctIcon from "/assets/images/icon-correct.svg";
+import incorrectIcon from "/assets/images/icon-incorrect.svg";
+import htmlIcon from "/assets/images/icon-html.svg";
+import cssIcon from "/assets/images/icon-css.svg";
+import jsIcon from "/assets/images/icon-js.svg";
+import accessibilityIcon from "/assets/images/icon-accessibility.svg";
+
 document.addEventListener("DOMContentLoaded", async function () {
   // Cache elements
   const lightThemeRadio = document.querySelector("#light");
@@ -76,10 +83,16 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   // Function to update the subject icon
   function updateSubjectIcon(quiz) {
+    const iconPaths = {
+      html: htmlIcon,
+      css: cssIcon,
+      javascript: jsIcon,
+      accessibility: accessibilityIcon,
+    };
     const newHtml = `
       <div class="img-wrapper ${quiz.title.toLowerCase()}">
         <img src="${
-          quiz.icon
+          iconPaths[quiz.title.toLowerCase()]
         }" class="${quiz.title.toLowerCase()}-icon" alt="" />
       </div>
       <p>${quiz.title}</p>
@@ -109,9 +122,9 @@ document.addEventListener("DOMContentLoaded", async function () {
                   .replace(/</g, "&lt;")
                   .replace(/>/g, "&gt;")}</p>
               </div>
-              <img class="icon-correct | hidden" src="/assets/images/icon-correct.svg" alt="Correct Icon"
+              <img class="icon-correct | hidden" src="${correctIcon}" alt="Correct Icon"
                     aria-hidden="true" />
-              <img class="icon-incorrect hidden" src="/assets/images/icon-incorrect.svg" alt="Incorrect Icon"
+              <img class="icon-incorrect hidden" src="${incorrectIcon}" alt="Incorrect Icon"
                     aria-hidden="true" />
             </label>
           </li>
