@@ -11,7 +11,7 @@
   border: 0;
   border-radius: $size-3;
   padding-block: $size-5;
-
+  margin-block-start: -$size-7;
   width: 100%;
   font-size: $font-size-600;
   font-weight: $font-weight-medium;
@@ -41,9 +41,11 @@
   @include mq(medium) {
     border-radius: $size-6;
     padding-block: $size-8;
+    margin-block-start: -$size-8;
   }
   @include mq(large) {
     grid-column: 2;
+    margin-block-start: 0;
   }
 }
 

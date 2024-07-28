@@ -8,11 +8,11 @@
   margin-inline: auto;
 }
 
-.subtitle-size {
+.subtitle-space {
   margin-block-start: $size-4;
 }
 
-.question-number-size {
+.question-number-space {
   margin-block-end: $size-3;
   @include mq(medium) {
     margin-block-end: $size-7;

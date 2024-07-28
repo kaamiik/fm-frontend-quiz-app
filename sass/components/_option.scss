@@ -106,12 +106,14 @@ input[type="radio"]:hover ~ .option-num > p {
   gap: $size-3;
   margin-inline: auto;
   width: fit-content;
+  margin-block-start: -$size-7;
 
   img {
     width: 32px;
     height: 32px;
   }
   @include mq(medium) {
+    margin-block-start: -$size-8;
     img {
       width: 40px;
       height: 40px;
@@ -119,5 +121,6 @@ input[type="radio"]:hover ~ .option-num > p {
   }
   @include mq(large) {
     grid-column: 2;
+    margin-block-start: 0;
   }
 }
