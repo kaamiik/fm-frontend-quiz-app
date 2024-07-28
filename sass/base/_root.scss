@@ -38,6 +38,9 @@
       --#{$color}-#{$shade}: #{$value};
     }
   }
+  --bg-mobile: url("/assets/images/pattern-background-mobile-light.svg");
+  --bg-tablet: url("/assets/images/pattern-background-tablet-light.svg");
+  --bg-desktop: url("/assets/images/pattern-background-desktop-light.svg");
 }
 :root[data-theme="dark"] {
   @each $color, $shade-map in $dark {
@@ -45,4 +48,7 @@
       --#{$color}-#{$shade}: #{$value};
     }
   }
+  --bg-mobile: url("/assets/images/pattern-background-mobile-dark.svg");
+  --bg-tablet: url("/assets/images/pattern-background-tablet-dark.svg");
+  --bg-desktop: url("/assets/images/pattern-background-desktop-dark.svg");
 }

@@ -10,13 +10,23 @@ label {
   svg {
     width: 16px;
     height: 16px;
+    @include mq(medium) {
+      width: 24px;
+      height: 24px;
+    }
   }
 
   &:first-of-type {
     padding-inline-end: $size-2;
+    @include mq(medium) {
+      padding-inline-end: $size-4;
+    }
   }
   &:last-of-type {
     padding-inline-start: $size-2;
+    @include mq(medium) {
+      padding-inline-start: $size-4;
+    }
   }
 }
 
@@ -28,6 +38,10 @@ label {
   height: 1.25rem;
   border-radius: 100vh;
   position: relative;
+  @include mq(medium) {
+    width: 3rem;
+    height: 1.75rem;
+  }
 }
 
 input[name="theme"] {
@@ -55,6 +69,10 @@ input[name="theme"] {
   background-color: white;
   transition: all 0.1s ease-out;
   z-index: 2;
+  @include mq(medium) {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .c-toggle__background {

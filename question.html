@@ -10,23 +10,14 @@
       href="./assets/images/favicon-32x32.png"
     />
     <title>Frontend Mentor | Frontend quiz app</title>
-    <script type="module" src="/main.js"></script>
+    <script type="module" src="/question.js"></script>
     <link rel="stylesheet" href="/sass/main.scss" />
   </head>
 
   <body>
     <header>
       <div class="container | flex">
-        <div class="subject-header |" aria-hidden="true">
-          <div class="img-wrapper accessibility">
-            <img
-              src="/assets/images/icon-accessibility.svg"
-              class="accessibility-icon"
-              alt=""
-            />
-          </div>
-          <p>Accessibility</p>
-        </div>
+        <div class="subject-with-icon js-subject-icon"></div>
         <fieldset role="radiogroup" aria-label="theme switcher">
           <div class="c-toggle">
             <label for="light">
@@ -72,18 +63,17 @@
       </div>
     </header>
     <main>
-      <form action="score.html" method="get">
+      <form class="js-question-form" action="score.html" method="get">
         <div class="container | grid">
           <!-- Quiz question start -->
-          <div class="question-section">
-            <p class="clr-neutral-700 body-s question-number-size">
-              Question <span class="number">6</span> of 10
-            </p>
-            <h2 class="heading-m">
-              Which of these color contrast ratios defines the minimum WCAG 2.1
-              Level AA requirement for normal text?
-            </h2>
-            <progress class="progress-bar" max="10" value="5"></progress>
+          <div class="question-section | flex-column">
+            <div>
+              <p class="clr-neutral-700 body-s question-number-size">
+                Question <span class="js-number"></span> of 10
+              </p>
+              <h2 class="js-question | heading-m"></h2>
+            </div>
+            <progress class="progress-bar" max="10" value="0"></progress>
           </div>
           <div class="question-options | flow">
             <ul class="options | flow">
@@ -98,17 +88,17 @@
                       aria-checked="false"
                     />
                     <div class="option-num">
-                      <p class="heading-s">A</p>
+                      <p class="heading-s"></p>
                     </div>
-                    <p class="heading-s">4.5:1</p>
+                    <p class="option-text | heading-s"></p>
                   </div>
                   <img
-                    class="hidden"
+                    class="icon-correct | hidden"
                     src="/assets/images/icon-correct.svg"
                     alt=""
                   />
                   <img
-                    class="hidden"
+                    class="icon-incorrect hidden"
                     src="/assets/images/icon-incorrect.svg"
                     alt=""
                   />
@@ -125,17 +115,17 @@
                       aria-checked="false"
                     />
                     <div class="option-num">
-                      <p class="heading-s">B</p>
+                      <p class="heading-s"></p>
                     </div>
-                    <p class="heading-s">3:1</p>
+                    <p class="option-text | heading-s"></p>
                   </div>
                   <img
-                    class="hidden"
+                    class="icon-correct | hidden"
                     src="/assets/images/icon-correct.svg"
                     alt=""
                   />
                   <img
-                    class="hidden"
+                    class="icon-incorrect hidden"
                     src="/assets/images/icon-incorrect.svg"
                     alt=""
                   />
@@ -152,17 +142,17 @@
                       aria-checked="false"
                     />
                     <div class="option-num">
-                      <p class="heading-s">C</p>
+                      <p class="heading-s"></p>
                     </div>
-                    <p class="heading-s">2.5:1</p>
+                    <p class="option-text heading-s"></p>
                   </div>
                   <img
-                    class="hidden"
+                    class="icon-correct | hidden"
                     src="/assets/images/icon-correct.svg"
                     alt=""
                   />
                   <img
-                    class="hidden"
+                    class="icon-incorrect hidden"
                     src="/assets/images/icon-incorrect.svg"
                     alt=""
                   />
@@ -179,29 +169,31 @@
                       aria-checked="false"
                     />
                     <div class="option-num">
-                      <p class="heading-s">D</p>
+                      <p class="heading-s"></p>
                     </div>
-                    <p class="heading-s">3:1</p>
+                    <p class="option-text heading-s"></p>
                   </div>
                   <img
-                    class="hidden"
+                    class="icon-correct | hidden"
                     src="/assets/images/icon-correct.svg"
                     alt=""
                   />
                   <img
-                    class="hidden"
+                    class="icon-incorrect hidden"
                     src="/assets/images/icon-incorrect.svg"
                     alt=""
                   />
                 </label>
               </li>
             </ul>
-            <button class="button" type="submit">Submit Answer</button>
-            <p class="error-check hidden | body-m">
-              <img src="/assets/images/icon-incorrect.svg" alt="" />
-              Please select an answer
-            </p>
           </div>
+          <button class="js-submit-button button" type="submit">
+            Submit Answer
+          </button>
+          <p class="js-error-check error-check hidden | body-m">
+            <img src="/assets/images/icon-incorrect.svg" alt="" />
+            Please select an answer
+          </p>
         </div>
       </form>
       <!-- Quiz question end -->

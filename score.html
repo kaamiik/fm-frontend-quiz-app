@@ -10,23 +10,14 @@
       href="./assets/images/favicon-32x32.png"
     />
     <title>Frontend Mentor | Frontend quiz app</title>
-    <script type="module" src="/main.js"></script>
+    <script type="module" src="/score.js"></script>
     <link rel="stylesheet" href="/sass/main.scss" />
   </head>
 
   <body>
     <header>
       <div class="container | flex">
-        <div class="subject-header |" aria-hidden="true">
-          <div class="img-wrapper accessibility">
-            <img
-              src="/assets/images/icon-accessibility.svg"
-              class="accessibility-icon"
-              alt=""
-            />
-          </div>
-          <p>Accessibility</p>
-        </div>
+        <div class="subject-with-icon js-subject-icon"></div>
         <fieldset role="radiogroup" aria-label="theme switcher">
           <div class="c-toggle">
             <label for="light">
@@ -77,21 +68,18 @@
           <!-- Quiz completed start -->
           <div class="score-section">
             <h2 class="heading-l-light">
-              Quiz completed <strong class="fw-medium">You scored...</strong>
+              Quiz completed
+              <strong style="display: block" class="fw-medium"
+                >You scored...</strong
+              >
             </h2>
           </div>
           <div class="flow">
             <div class="score-wrapper">
-              <div class="subject-score |" aria-hidden="true">
-                <div class="img-wrapper accessibility">
-                  <img
-                    src="/assets/images/icon-accessibility.svg"
-                    class="accessibility-icon"
-                    alt=""
-                  />
-                </div>
-                <p>Accessibility</p>
-              </div>
+              <div
+                class="subject-with-icon js-subject-icon"
+                aria-hidden="true"
+              ></div>
               <h3 class="score | display">
                 8 <span class="body-m">out of 10</span>
               </h3>

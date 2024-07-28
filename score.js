@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
   const lightThemeRadio = document.querySelector("#light");
   const darkThemeRadio = document.querySelector("#dark");
+  const quiz = JSON.parse(localStorage.getItem("quiz"));
+  const subjectWithIcon = document.querySelectorAll(".js-subject-icon");
 
   function applyTheme(theme) {
     document.documentElement.setAttribute("data-theme", theme);
@@ -34,4 +36,26 @@ document.addEventListener("DOMContentLoaded", function () {
       localStorage.setItem("theme", "dark");
     }
   });
+
+  function updateSubjectIcon(quiz) {
+    const newHtml = `
+      <div class="img-wrapper ${quiz.title.toLowerCase()}">
+        <img src="${
+          quiz.icon
+        }" class="${quiz.title.toLowerCase()}-icon" alt="" />
+      </div>
+      <p>${quiz.title}</p>
+    `;
+
+    subjectWithIcon.forEach((item) => {
+      item.innerHTML = newHtml;
+    });
+  }
+
+  updateSubjectIcon(quiz);
+
+  const score = localStorage.getItem("correctAnswers");
+  document.querySelector(
+    ".score"
+  ).innerHTML = `${score} <span class="body-m">out of 10</span>`;
 });

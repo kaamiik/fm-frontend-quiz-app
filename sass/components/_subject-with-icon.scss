@@ -1,0 +1,15 @@
+@use "../abstracts/" as *;
+
+.subject-with-icon {
+  display: flex;
+  align-items: center;
+  gap: $size-4;
+  color: $color-neutral-900;
+  font-size: $font-size-500;
+  font-weight: $font-weight-medium;
+  cursor: pointer;
+
+  @include mq(medium) {
+    gap: $size-8;
+  }
+}

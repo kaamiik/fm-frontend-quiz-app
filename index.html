@@ -17,7 +17,10 @@
   <body>
     <header>
       <div class="container | flex">
-        <div class="subject-header | visibility-hidden" aria-hidden="true">
+        <div
+          class="subject-with-icon js-subject-icon | visibility-hidden"
+          aria-hidden="true"
+        >
           <div class="img-wrapper html">
             <img src="/assets/images/icon-html.svg" class="html-icon" alt="" />
           </div>
@@ -42,7 +45,7 @@
               <span class="visually-hidden">Light Mode</span>
             </label>
             <span class="c-toggle__wrapper">
-              <input type="radio" name="theme" id="light" checked />
+              <input type="radio" name="theme" id="light" />
               <input type="radio" name="theme" id="dark" />
               <span aria-hidden="true" class="c-toggle__background"></span>
               <span aria-hidden="true" class="c-toggle__switcher"></span>
@@ -68,12 +71,16 @@
       </div>
     </header>
     <main>
-      <form action="question.html" method="get">
+      <form class="js-start-form" action="question.html" method="get">
         <div class="container | grid">
           <div class="intro-section">
             <h1 class="heading-l-light">
-              Welcome to the <strong class="fw-medium">Frontend Quiz!</strong>
+              Welcome to the
+              <strong style="display: block" class="fw-medium"
+                >Frontend Quiz!</strong
+              >
             </h1>
+            <p class="body-s subtitle-size">Pick a subject to get started.</p>
           </div>
 
           <!-- Quiz menu start -->
@@ -86,14 +93,16 @@
                   value="html"
                   class="subject-button"
                 >
-                  <div class="img-wrapper html">
-                    <img
-                      src="/assets/images/icon-html.svg"
-                      class="html-icon"
-                      alt=""
-                    />
+                  <div class="subject-with-icon">
+                    <div class="img-wrapper html">
+                      <img
+                        src="/assets/images/icon-html.svg"
+                        class="html-icon"
+                        alt=""
+                      />
+                    </div>
+                    <p>HTML</p>
                   </div>
-                  HTML
                 </button>
               </li>
               <li class="subject">
@@ -103,14 +112,16 @@
                   value="css"
                   class="subject-button"
                 >
-                  <div class="img-wrapper css">
-                    <img
-                      src="/assets/images/icon-css.svg"
-                      class="css-icon"
-                      alt=""
-                    />
+                  <div class="subject-with-icon">
+                    <div class="img-wrapper css">
+                      <img
+                        src="/assets/images/icon-css.svg"
+                        class="css-icon"
+                        alt=""
+                      />
+                    </div>
+                    <p>CSS</p>
                   </div>
-                  CSS
                 </button>
               </li>
               <li class="subject">
@@ -120,14 +131,16 @@
                   value="javascript"
                   class="subject-button"
                 >
-                  <div class="img-wrapper js">
-                    <img
-                      src="/assets/images/icon-js.svg"
-                      class="js-icon"
-                      alt=""
-                    />
+                  <div class="subject-with-icon">
+                    <div class="img-wrapper javascript">
+                      <img
+                        src="/assets/images/icon-js.svg"
+                        class="javascript-icon"
+                        alt=""
+                      />
+                    </div>
+                    <p>Javascript</p>
                   </div>
-                  Javascript
                 </button>
               </li>
               <li class="subject">
@@ -137,14 +150,16 @@
                   value="accessibility"
                   class="subject-button"
                 >
-                  <div class="img-wrapper accessibility">
-                    <img
-                      src="/assets/images/icon-accessibility.svg"
-                      class="accessibility-icon"
-                      alt=""
-                    />
+                  <div class="subject-with-icon">
+                    <div class="img-wrapper accessibility">
+                      <img
+                        src="/assets/images/icon-accessibility.svg"
+                        class="accessibility-icon"
+                        alt=""
+                      />
+                    </div>
+                    <p>Accessibility</p>
                   </div>
-                  Accessibility
                 </button>
               </li>
             </ul>

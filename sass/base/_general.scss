@@ -6,24 +6,35 @@ body {
   font-size: $font-size-400;
   color: $color-neutral-900;
   background-color: $color-neutral-200;
+  background-image: var(--bg-mobile);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   display: flex;
   flex-direction: column;
+  @include mq(medium) {
+    background-image: var(--bg-tablet);
+  }
+  @include mq(large) {
+    background-image: var(--bg-desktop);
+  }
 }
 
 header {
   margin-block: $size-4;
-
-  .subject-header {
-    display: flex;
-    align-items: center;
-    gap: $size-4;
-    color: $color-neutral-900;
-    font-size: $font-size-500;
-    font-weight: $font-weight-medium;
-    cursor: pointer;
+  @include mq(medium) {
+    margin-block: $size-10;
+  }
+  @include mq(large) {
+    margin-block: $size-20;
   }
 }
 
 main {
   margin-block: $size-8;
+  @include mq(medium) {
+    margin-block: $size-2;
+  }
+  @include mq(large) {
+    margin-block: 0;
+  }
 }

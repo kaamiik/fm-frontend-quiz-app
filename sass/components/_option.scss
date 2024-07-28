@@ -1,5 +1,9 @@
 @use "../abstracts/" as *;
 
+.question-options {
+  position: relative;
+}
+
 .option {
   display: flex;
   justify-content: space-between;
@@ -9,10 +13,17 @@
   border-radius: $size-3;
   position: relative;
   box-shadow: 0 16px 40px 0 $color-neutral-600;
+  @include mq(medium) {
+    border-radius: $size-6;
+  }
 
   & > img {
     width: 32px;
     height: 32px;
+    @include mq(medium) {
+      width: 40px;
+      height: 40px;
+    }
   }
 }
 
@@ -20,6 +31,9 @@
   display: flex;
   align-items: center;
   gap: $size-4;
+  @include mq(medium) {
+    gap: $size-8;
+  }
 }
 
 .option:has(input[type="radio"]:checked, input[type="radio"]:focus) {
@@ -55,6 +69,7 @@ input[type="radio"] {
 }
 
 .option-num {
+  min-width: 40px;
   width: 40px;
   height: 40px;
   background-color: $color-neutral-400;
@@ -64,6 +79,25 @@ input[type="radio"] {
   p {
     color: $color-neutral-500;
   }
+  @include mq(medium) {
+    min-width: 56px;
+    width: 56px;
+    height: 56px;
+    border-radius: $size-2;
+  }
+}
+
+input[type="radio"]:checked ~ .option-num {
+  background-color: $color-primary-400;
+}
+input[type="radio"]:checked ~ .option-num > p {
+  color: white;
+}
+input[type="radio"]:hover ~ .option-num {
+  background-color: #f6e7ff;
+}
+input[type="radio"]:hover ~ .option-num > p {
+  color: $color-primary-400;
 }
 
 .error-check {
@@ -72,8 +106,18 @@ input[type="radio"] {
   gap: $size-3;
   margin-inline: auto;
   width: fit-content;
+
   img {
     width: 32px;
     height: 32px;
+  }
+  @include mq(medium) {
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  @include mq(large) {
+    grid-column: 2;
   }
 }

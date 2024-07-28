@@ -3,9 +3,13 @@
 .grid {
   display: grid;
   gap: var(--grid-gap, $grid-gap);
-
   @include mq(medium) {
-    grid-auto-flow: column;
-    grid-auto-columns: 1fr;
+    --grid-gap: #{$size-16};
+  }
+
+  @include mq(large) {
+    --grid-gap: 8.5rem;
+    row-gap: 2rem;
+    grid-template-columns: minmax(28.375rem, 1fr) 1fr;
   }
 }

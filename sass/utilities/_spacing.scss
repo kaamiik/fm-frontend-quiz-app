@@ -14,6 +14,9 @@
 
 .question-number-size {
   margin-block-end: $size-3;
+  @include mq(medium) {
+    margin-block-end: $size-7;
+  }
 }
 
 @each $size-name, $size-value in $sizes {

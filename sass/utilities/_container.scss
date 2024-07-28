@@ -2,11 +2,13 @@
 
 .container {
   --padding: #{$container-min-margin-inline} * 2;
-  --max-width: #{$container-max-width};
+  --max-width: #{$container-max-width-tablet};
   @include mq(medium) {
     --padding: #{$container-min-margin-inline-tablet-desktop} * 2;
   }
-
+  @include mq(large) {
+    --max-width: #{$container-max-width};
+  }
   width: min(100% - var(--padding), var(--max-width));
   margin-inline: auto;
 }

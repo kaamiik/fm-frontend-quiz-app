@@ -1,26 +1,50 @@
+@use "../abstracts/" as *;
+
 .img-wrapper {
   width: 40px;
   height: 40px;
   border-radius: 6px;
   display: grid;
   place-content: center;
+
+  @include mq(medium) {
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+  }
 }
 
 .html-icon {
   width: 32px;
   height: 28px;
+  @include mq(medium) {
+    width: 40px;
+    height: 40px;
+  }
 }
 .css-icon {
   width: 25px;
   height: 32px;
+  @include mq(medium) {
+    width: 40px;
+    height: 40px;
+  }
 }
-.js-icon {
+.javascript-icon {
   width: 30px;
   height: 30px;
+  @include mq(medium) {
+    width: 40px;
+    height: 40px;
+  }
 }
 .accessibility-icon {
   width: 25px;
   height: 30px;
+  @include mq(medium) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .img-wrapper.html {
@@ -29,7 +53,7 @@
 .img-wrapper.css {
   background-color: #e0fdef;
 }
-.img-wrapper.js {
+.img-wrapper.javascript {
   background-color: #ebf0ff;
 }
 .img-wrapper.accessibility {
