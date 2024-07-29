@@ -137,8 +137,7 @@ document.addEventListener("DOMContentLoaded", async function () {
   // Function to handle question form submission
   function handleFormSubmit(event) {
     event.preventDefault();
-    submitButton.blur();
-
+    const allOptions = questionForm.querySelectorAll('input[name="option"]');
     if (!hasAnswered) {
       const selectedOption = questionForm.querySelector(
         'input[name="option"]:checked'
@@ -151,7 +150,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
       noAnswerError.classList.add("hidden");
       const selectedLabel = selectedOption.parentElement.parentElement;
-      const allOptions = questionForm.querySelectorAll('input[name="option"]');
+
       allOptions.forEach((option) => {
         option.disabled = true;
       });
@@ -167,6 +166,9 @@ document.addEventListener("DOMContentLoaded", async function () {
         selectedLabel
           .querySelector(".icon-correct")
           .setAttribute("aria-hidden", "false");
+        allOptions.forEach((option) => {
+          option.checked = false;
+        });
         correctAnswers++;
       } else {
         selectedLabel.classList.add("incorrect");
@@ -176,6 +178,9 @@ document.addEventListener("DOMContentLoaded", async function () {
         selectedLabel
           .querySelector(".icon-incorrect")
           .setAttribute("aria-hidden", "false");
+        allOptions.forEach((option) => {
+          option.checked = false;
+        });
         const correctOption = Array.from(allOptions).find(
           (option) =>
             decodeURIComponent(option.value) ===
@@ -199,6 +204,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         updateQuestion();
         submitButton.textContent = "Submit Answer";
         hasAnswered = false;
+        submitButton.blur();
         const allOptions = questionForm.querySelectorAll(
           'input[name="option"]'
         );
