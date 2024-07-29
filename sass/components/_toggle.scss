@@ -55,7 +55,7 @@ input[name="theme"] {
   cursor: pointer;
 
   &:focus ~ .c-toggle__switcher {
-    border: 0.7px solid hsl(216, 47%, 78%);
+    outline: 2px solid black;
   }
 }
 
