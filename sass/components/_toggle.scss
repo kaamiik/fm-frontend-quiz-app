@@ -54,8 +54,11 @@ input[name="theme"] {
   z-index: 2;
   cursor: pointer;
 
+  &:focus ~ .c-toggle__background {
+    outline: 3px solid $color-accent-400;
+  }
   &:focus ~ .c-toggle__switcher {
-    outline: 2px solid black;
+    outline: 3px solid #ff4d00;
   }
 }
 

@@ -35,7 +35,7 @@
   // }
 
   &:is(:hover, :focus) {
-    background-color: color-mix(in srgb, white 50%, $color-primary-400);
+    background-color: color-mix(in srgb, white 20%, $color-primary-400);
     // background-color: color.mix(white, hsl(277, 91%, 56%), $weight: 50%);
   }
   @include mq(medium) {

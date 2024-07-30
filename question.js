@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", async function () {
           iconPaths[quiz.title.toLowerCase()]
         }" class="${quiz.title.toLowerCase()}-icon" alt="" />
       </div>
-      <p>${quiz.title}</p>
+      <h1 class="heading-s">${quiz.title}</h1>
     `;
     subjectWithIcon.innerHTML = newHtml;
   }
@@ -122,9 +122,9 @@ document.addEventListener("DOMContentLoaded", async function () {
                   .replace(/</g, "&lt;")
                   .replace(/>/g, "&gt;")}</p>
               </div>
-              <img class="icon-correct | hidden" src="${correctIcon}" alt="Correct Icon"
+              <img class="icon-correct | hidden" src="${correctIcon}" alt="Correct"
                     aria-hidden="true" />
-              <img class="icon-incorrect hidden" src="${incorrectIcon}" alt="Incorrect Icon"
+              <img class="icon-incorrect hidden" src="${incorrectIcon}" alt="Incorrect"
                     aria-hidden="true" />
             </label>
           </li>
@@ -145,6 +145,7 @@ document.addEventListener("DOMContentLoaded", async function () {
       if (!selectedOption) {
         noAnswerError.classList.remove("hidden");
         noAnswerError.setAttribute("aria-hidden", "false");
+        noAnswerError.focus();
         return;
       }
 
@@ -211,6 +212,10 @@ document.addEventListener("DOMContentLoaded", async function () {
         allOptions.forEach((option) => {
           option.disabled = false;
         });
+        const firstOption = questionForm.querySelector('input[name="option"]');
+        if (firstOption) {
+          firstOption.focus();
+        }
       } else {
         localStorage.setItem("correctAnswers", correctAnswers);
         window.location.href = "score.html";

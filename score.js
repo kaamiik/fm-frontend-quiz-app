@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
           iconPaths[quiz.title.toLowerCase()]
         }" class="${quiz.title.toLowerCase()}-icon" alt="" />
       </div>
-      <p>${quiz.title}</p>
+      <h1 class="heading-s">${quiz.title}</h1>
     `;
     subjectWithIconElements.forEach((item) => {
       item.innerHTML = newHtml;
